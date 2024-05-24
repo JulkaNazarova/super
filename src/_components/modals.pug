@@ -1,0 +1,219 @@
+//#modal-filter.modal-big.modal.fade(tabindex='-1', role='dialog' )
+//  .modal-dialog(role='document')
+//    .modal-content
+//      button.close-modal(type='button', data-dismiss='modal', aria-label='Закрыть')
+//      .modal-body
+//        .modal-container
+//          .filter-title Фильтр
+//          .filter__block
+//            each val in ['Химчистка', 'Чистка ковров', 'Стирка и аквачистка']
+//              .filter-accord__item.accord-wrap--js
+//                .filter-accord__title.accord-title--js !{val}
+//                .filter-accord__block.accord-block--js
+//                  .checkbox__block
+//                    each name in ['Предварительная обработка', 'Предварительное выведение пятен', 'Моющая ванна в стрике','Последнее полоскание', 'Финишное выведение пятен']
+//                      label.label-checkbox
+//                        input(type='checkbox').input-checkbox
+//                        .checkbox-text !{name}
+//                    a(href="javascript:void(0);").more-filter + Показать ещё 2
+//          +button-blue('Применить')
+//          a(href="javascript:void(0);").clear-button Сбросить
+
+
+//#modal-online.modal-big.modal.fade(tabindex='-1', role='dialog' )
+//  .modal-dialog(role='document')
+//    .modal-content
+//      button.close-modal(type='button', data-dismiss='modal', aria-label='Закрыть')
+//      .modal-body
+//        .modal-container
+//          .modal-head
+//            .h1.text-center Написать в чат с онлайн-консультантом
+//          .inputs-block-modal
+//            +input__wrap({
+//              type: 'text',
+//              placeholder: 'Имя'
+//            })
+//            +input__wrap({
+//              type: 'tel',
+//              placeholder: 'Номер телефона'
+//            })
+//            +input__wrap({
+//              type: 'text',
+//              placeholder: 'Город'
+//            })
+//            .input__wrap
+//              textarea(type='text' placeholder='Ваше сообщение').textarea
+//              label.label Ваше сообщение
+//            +captcha
+//            //.contact-inputs__wrap
+//              .contact-inputs__left
+//                .input__wrap
+//                  .captcha__wrap 88 / 8 =
+//              .contact-inputs__right
+//                +input__wrap({
+//                  type: 'text',
+//                  placeholder: 'Введите ответ'
+//                })
+//          a(href="javascript:void(0);").button.button-blue Отправить заявку
+//      
+//              
+//#modal-address.modal-big.modal.fade(tabindex='-1', role='dialog' )
+//  .modal-dialog(role='document')
+//    .modal-content
+//      button.close-modal(type='button', data-dismiss='modal', aria-label='Закрыть')
+//      .modal-body
+//        .modal-container
+//          .modal-head
+//            .h1.text-center Адреса компании 
+//          .modal-info-block
+//            .modal-info-block__top 142712, Московская область, Ленинский район, Горки Ленинские, Каширское шоссе, квартал «Пронино», влад. 1, стр. 1.
+//            .modal-info-block__bottom.d-flex
+//              .modal-info-block__bottom--item
+//                a(href="tel:+7 (495) 120-90-37").address-item__text +7 (495) 120-90-37
+//                a(href="tel:+7 (800) 500-74-09").address-item__text +7 (800) 500-74-09
+//              .modal-info-block__bottom--item
+//                a(href="mailto:info@плекс.рф").address-item__text info@плекс.рф
+//              .modal-info-block__bottom--item.text-right.mr-lg-0
+//          .modal-info-block
+//            .modal-info-block__top 123308, Москва, 2-й Силикатный проезд, 9c2
+//            .modal-info-block__bottom.d-flex
+//              .modal-info-block__bottom--item
+//                a(href="tel:+7 (495) 120-90-37").address-item__text +7 (495) 120-90-37
+//                a(href="tel:+7 (800) 500-74-09").address-item__text +7 (800) 500-74-09
+//              .modal-info-block__bottom--item
+//                .address-item__text пн-пт: 9:00-19:00
+//                .address-item__text сб-вс: 10:00-16:00
+//              .modal-info-block__bottom--item.text-right.mr-lg-0
+//                a(href="mailto:service@6006911.ru").address-item__text service@6006911.ru
+//                a(href="mailto:kosmanager@ya.ru").address-item__text kosmanager@ya.ru
+//
+//
+//#modal-product-add.modal-middle.modal.fade(tabindex='-1', role='dialog' )
+//  .modal-dialog(role='document')
+//    .modal-content
+//      button.close-modal(type='button', data-dismiss='modal', aria-label='Закрыть')
+//      .modal-body
+//        .modal-container.modal-product-add
+//          .modal-head
+//            .h2.text-center Товар добавлен в корзину!
+//          .product__item.d-flex.align-items-lg-center
+//            .product__item-top
+//              img(src='../img/product-img.png' alt='', title='').img-product
+//            .product__item-bottom.d-flex.align-items-lg-end
+//              .product__item-desc--wrap
+//                p.product__item-desc Средство для очистки колесных дисков слово «Disk»
+//                .tare__block
+//                  .tare.item-active-js 5 л
+//                  .tare.item-active-js 10 л
+//              .price__block.d-flex.flex-column.mb-0
+//                .product-price.price 3 200 ₽
+//                +count
+//          .modal-button-wrap
+//            a(href="javascript:void(0);" data-dismiss='modal').button-blue Продолжить покупки
+//            a(href="javascript:void(0);").button.button-gray Перейти корзину
+//
+//
+//#modal-reg.modal-small.modal.fade(tabindex='-1', role='dialog' )
+//  .modal-dialog(role='document')
+//    .modal-content
+//      button.close-modal(type='button', data-dismiss='modal', aria-label='Закрыть')
+//      .modal-body
+//        .modal-container.modal-product-add
+//          .modal-head
+//            .h2.text-center Регистрация
+//          p.p.text-center
+//            | Вы успешно зарегистрировали личный кабинет. Данные для входа направлены на указанный вами телефон
+//          .modal-bottom-wrap
+//            a(href="javascript:void(0);").button.button-blue Войти
+//          
+// 
+//#modal-reg-login.modal-small.modal.fade(tabindex='-1', role='dialog' )
+//  .modal-dialog(role='document')
+//    .modal-content
+//      button.close-modal(type='button', data-dismiss='modal', aria-label='Закрыть')
+//      .modal-body
+//        .modal-container.modal-product-add
+//          .modal-head
+//            .h2.text-center Вход в личный кабинет
+//          p.p.text-center.mb-lg-4
+//            | Введите ваш номер телефона, чтобы получить одноразовый пароль для входа в аккаунт 
+//          .modal-bottom-wrap
+//            +input__wrap({
+//              type: 'tel',
+//              placeholder: 'Телефон'
+//            })
+//            a(href="javascript:void(0);").button.button-blue Получить СМС с паролем
+//            .agreement-text Нет учетной записи? <a href="#">Зарегистрироваться</a>
+//
+//#modal-reg-repeat.modal-small.modal.fade(tabindex='-1', role='dialog' )
+//  .modal-dialog(role='document')
+//    .modal-content
+//      button.close-modal(type='button', data-dismiss='modal', aria-label='Закрыть')
+//      .modal-body
+//        .modal-container.modal-product-add
+//          .modal-subtitle Отлично! На указанный номер телефона оправлен пароль, введите его
+//          .modal-bottom-wrap
+//            .code-inputs-wrap
+//              - for(var i=0; i<5; i++)
+//                .input__wrap
+//                  input(type='text', placeholder='').login-input
+//
+//            a(href="javascript:void(0);").button.button-blue Отправить повторно
+//            .agreement-text Не пришел пароль? Нажмите кнопку «Отправить повторно»
+//
+//#modal-reg-get.modal-small.modal.fade(tabindex='-1', role='dialog' )
+//  .modal-dialog(role='document')
+//    .modal-content
+//      button.close-modal(type='button', data-dismiss='modal', aria-label='Закрыть')
+//      .modal-body
+//        .modal-container.modal-product-add
+//          .modal-subtitle Отлично! На указанный номер телефона отправлен пароль, введите его
+//          .modal-bottom-wrap
+//            .code-inputs-wrap
+//              - for(var i=0; i<5; i++)
+//                .input__wrap
+//                  input(type='text', placeholder='').login-input
+//
+//            a(href="javascript:void(0);").button.button-blue Войти
+//            .agreement-text Отправить пароль повторно (доступно через 0:58)
+//
+//#modal-order-done.modal-small.done.modal.fade(tabindex='-1', role='dialog' )
+//  .modal-dialog(role='document')
+//    .modal-content
+//      button.close-modal(type='button', data-dismiss='modal', aria-label='Закрыть')
+//      .modal-body
+//        .modal-container
+//          .modal-container.modal-product-add
+//            .modal-head
+//              .modal-subtitle Ваш заказ успешно оформлен!
+//            p.p.text-center
+//              | Отслеживать статус заказа Вы можете в личном кабинете, <a href="#">перейдя по ссылке</a>
+//
+//#modal-rec-done.modal-small.done.modal.fade(tabindex='-1', role='dialog' )
+//  .modal-dialog(role='document')
+//    .modal-content
+//      button.close-modal(type='button', data-dismiss='modal', aria-label='Закрыть')
+//      .modal-body
+//        .modal-container
+//          .modal-container.modal-product-add
+//            .modal-head
+//              .modal-subtitle Ваша рекламация отправлена
+//            p.p.text-center
+//              | Мы рассмотрим вашу рекламацию в ближайшее время, после чего наши менеджеры свяжутся с Вами
+//
+//#modal-reg-done.modal-small.modal.fade(tabindex='-1', role='dialog' )
+//  .modal-dialog(role='document')
+//    .modal-content
+//      button.close-modal(type='button', data-dismiss='modal', aria-label='Закрыть')
+//      .modal-body
+//        .modal-container.modal-product-add
+//          .modal-head
+//            .h2.text-center Пользователь добавлен
+//          p.p.text-center
+//            | На указанный вами телефон отправлено сообщение с паролем для входа
+//          .modal-bottom-wrap
+//            a(href="javascript:void(0);").button.button-blue Войти
+//
+
+
+

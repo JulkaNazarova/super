@@ -1,0 +1,18 @@
+doctype html
+html(lang='ru')
+  include ../templates/head
+
+
+  body.body
+    //#upbutton
+    //  img(src='../img/upbutton.svg' alt='', title='').upbutton
+    include ../_components/header
+      
+    .wrapper
+      block content
+
+    include ../_components/footer
+    
+
+    include ../templates/scripts.pug
+      

@@ -1,0 +1,302 @@
+@media (min-width: 320px) and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 1400px) {
+  html {
+
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  html {
+    //font-size: 12px;
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 1140px) {
+  html {
+    //font-size: 13px;
+  }
+
+}
+
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .header-top {
+    display: none;
+  }
+
+  .header-bottom__logo {
+    width: 144px;
+    min-width: 144px;
+  }
+
+  .banner-slider__item {
+    aspect-ratio: auto;
+    height: 600px;
+  }
+
+  .header-humb {
+    display: block;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .offers__wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .header-icons {
+    gap: 15px;
+  }
+
+  .header-icon {
+    width: 20px;
+    height: 20px;
+    img {
+      height: 100%;
+    }
+  }
+
+  .banner-slider__title {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 16px;
+  }
+
+  .banner-slider__subtitle {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .catalog-slider__wrap {
+    margin-bottom: 20px;
+  }
+
+  .catalog-slider__item {
+    padding: 16px 0 16px 16px;
+  }
+
+  .catalog-slider__title {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .partners-slider__item {
+    width: 100px;
+    height: 50px;
+  }
+
+  .partners-slider__wrap {
+    margin-bottom: 20px;
+  }
+
+  .h2__subtitle {
+    font-size: 14px;
+    line-height: 16px;
+
+  }
+
+  .h2__title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  .about-services__wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .about-services__img {
+    display: none;
+  }
+
+  .products-slider {
+    overflow: visible;
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+  }
+
+  .tabs__overflow {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+  }
+
+  .products-slider__item {
+    padding: 20px;
+  }
+
+  .question-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-input__wrap textarea {
+    height: 120px;
+  }
+
+  .about-technic__wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .about-technic__img {
+    display: none;
+  }
+
+  .advantages__wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .maps-tabs__wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .news-preview__wrap {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .section-gray {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .btn {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 11px 10px;
+
+  }
+
+  .banner-slider__btn {
+    width: 184px;
+  }
+
+  p,
+  ul {
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .tabs-head__item {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .question-form__wrap .h2__title {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 10px;
+  }
+
+  .form-input__wrap input, .form-input__wrap textarea {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .agreement {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .label-checkbox > div {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .label-checkbox > div::before {
+    margin-right: 24px;
+  }
+
+  .offer-item__info {
+    padding: 20px 10px 40px;
+  }
+
+  .offer-item__date {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .offer-item__brand {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .offer-item__title {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .offer-item__head {
+    margin-bottom: 18px;
+  }
+
+  .advantages-item__text {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .maps-tab__tel {
+    margin-bottom: 24px;
+  }
+
+  .maps-tab {
+    padding: 20px 20px 16px;
+  }
+
+  .maps-block {
+    height: 400px;
+  }
+
+  .news-preview__info {
+    padding: 10px 10px 20px;
+  }
+
+  .news-preview__date {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 22px;
+  }
+
+  .news-preview__title {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 14px;
+  }
+
+  .news-preview__text {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 370px) {
+}

@@ -1,0 +1,685 @@
+//mixin icon(name, mod)
+//  - mod = mod || ''
+//  if mod
+//    svg(class=`icon icon-${name} ${mod}`)
+//      use(xlink:href=`./img/sprite.svg#${name}`)
+//  else
+//    svg(class=`icon icon-${name}`)
+//      use(xlink:href=`./img/sprite.svg#${name}`)
+//
+//
+//mixin icons-fixed
+//  .icons-fixed
+//    a(href="javascript:void(0);").icon-fixed.icon-fixed_send
+//    a(href="javascript:void(0);").icon-fixed.icon-fixed_geo
+
+//
+//
+//mixin button-blue(title)
+//  a(href="javascript:void(0);").button.button-blue=title
+//
+//mixin button-white(title)
+//  a(href="javascript:void(0);").button.button-white=title
+//
+//mixin button-gray(title)
+//  a(href="javascript:void(0);").button.button-gray=title
+//
+//mixin button-tr(title)
+//  a(href="javascript:void(0);").button.button-tr=title
+//
+//mixin link-more-content(title)
+//  a(href="javascript:void(0);").link-more-content=title
+//
+//
+//
+//
+//mixin product__item
+//  .product__item
+//    .product__item-top
+//      img(src='../img/product-img.png' alt='', title='').img-product
+//    .product__item-bottom.product__item-bottom_tailes
+//      p.product__item-desc Средство для очистки колесных дисков слово «Disk»
+//      .price__block
+//        .tare__block
+//          a(href="javascript:void(0);").tare.item-active-js 5 л
+//          a(href="javascript:void(0);").tare.item-active-js 10 л
+//          a(href="javascript:void(0);").tare.item-active-js 15 л
+//          a(href="javascript:void(0);").tare.item-active-js 15 л
+//          a(href="javascript:void(0);").tare.item-active-js 15 л
+//          a(href="javascript:void(0);").tare.item-active-js 15 л
+//          a(href="javascript:void(0);").tare.item-active-js 15 л
+//      .product-price__block
+//        .product-price.price 3 200 ₽
+//        .old-price.price 26 496 ₽
+//      .button-count__wrap
+//        +count
+//        a(href="#modal-product-add" data-toggle="modal").button-blue.button.pay-button Купить
+//    .product__item-bottom.product__item-bottom_list
+//      .product__item-desc--wrap
+//        p.product__item-desc Средство для очистки колесных дисков слово «Disk»
+//        .tare__block
+//          a(href="javascript:void(0);").tare.item-active-js 5 л
+//          a(href="javascript:void(0);").tare.item-active-js 10 л
+//          a(href="javascript:void(0);").tare.item-active-js 15 л
+//          a(href="javascript:void(0);").tare.item-active-js 15 л
+//          a(href="javascript:void(0);").tare.item-active-js 15 л
+//          a(href="javascript:void(0);").tare.item-active-js 15 л
+//          a(href="javascript:void(0);").tare.item-active-js 15 л
+//      .price__block
+//        .product-price.price 3 200 ₽
+//        .button-count__wrap
+//          +count
+//          a(href="javascript:void(0);").button.button-blue.pay-button Купить
+//
+//
+//mixin news__item_small
+//  .news__item.news__item_small
+//    .news__item-top
+//      .img-news(style=`background-image:url('../img/news-img.jpg');`)
+//      //img(src='../img/news-img.jpg' alt='', title='').img-news
+//    .news__item-bottom
+//      p.news__item-text Основы безопасного производства на мясокомбинате
+//      .news__item-date 12.05.2020
+//
+//
+//mixin drop__menu-block--inner
+//  .drop__menu-block--inner.accord-block--js
+//    ul.menu-accord__list
+//      each val in ['Антисептики для рук','Дезинфицирующее мыло для рук','Дезинфекция поверхностей','Дезинфицирующий стиральный порошок','Дезинфекция поверхностей']
+//        li.menu-accord__item
+//          a(href="javascript:void(0);").menu-accord__link !{val}
+//
+//
+//mixin filter(catalog)
+//  .filter
+//    .filter-title Фильтр
+//    .filter__block
+//      //if(catalog)
+//        // each val in ['Цена', 'Литраж, л']
+//        //   .filter-accord__item.accord-wrap--js
+//        //     .filter-accord__title.accord-title--js !{val}
+//        //     .filter-accord__block.accord-block--js(style='display:block;')
+//        //       .range__block
+//        //         .range-slider
+//        //           .extra-controls
+//        //             input.input-range.js-input-from(type='text' value='0')
+//        //             |-
+//        //             input.input-range.js-input-to(type='text' value='0')
+//        //
+//        //           input.js-range-slider(type='text' value='')
+//        //
+//
+//
+//
+//      each val in ['Химчистка', 'Чистка ковров', 'Стирка и аквачистка', 'Химчистка', 'Чистка ковров', 'Стирка и аквачистка']
+//        .filter-accord__item.accord-wrap--js
+//          .filter-accord__title.accord-title--js !{val}
+//          .filter-accord__block.accord-block--js
+//            .checkbox__block
+//              each name in ['Предварительная обработка', 'Предварительное выведение пятен', 'Моющая ванна в стрике','Последнее полоскание', 'Финишное выведение пятен']
+//                label.label-checkbox
+//                  input(type='checkbox').input-checkbox
+//                  .checkbox-text !{name}
+//              a(href="javascript:void(0);").more-filter + Показать ещё 2
+//    +button-blue('Применить')
+//    a(href="javascript:void(0);").clear-button Сбросить
+//
+//
+//
+//mixin drop__menu--inner(id)
+//  div(class='drop__menu--inner menu__block-js' data-menu-item=`${id}`)
+//    ul.drop__menu-list--inner
+//      each val, index  in ['Средства для рук', 'Дезинфекция дома', 'Средства для стирки', 'Средства для стёкол и зеркал', 'Специальные средства', 'Специальные средства', 'Средства для кухни и ванной', 'Средства для санузлов', 'Средства для чистки кожи']
+//        li.drop__menu-item--inner.accord-wrap--js
+//          a(href="javascript:void(0);").drop__menu-link--inner.accord-title--js
+//            +icon(`menu-icon-${index+1}`, 'drop__menu-item-img--inner')
+//            .drop__menu-item-text !{val}
+//          +drop__menu-block--inner
+//    ul.drop__menu-list--inner
+//      each val, index  in ['Средства для ремонта', 'Дезинфекция поверхностей', 'Универсальные чистящие средства', 'Дезинфицирующее мыло для рук', 'Дезинфицирующий стиральный порошок', 'Средства для посудомоечных машин', 'Средства для ручной мойки посуды']
+//        li.drop__menu-item--inner.accord-wrap--js
+//          a(href="javascript:void(0);").drop__menu-link--inner.accord-title--js
+//            +icon(`menu-icon-${index+10}`, 'drop__menu-item-img--inner')
+//            .drop__menu-item-text !{val}
+//          +drop__menu-block--inner
+//
+//
+//
+//
+//mixin breadcrumb
+//  .container
+//    ul.breadcrumb__list.d-none.d-lg-flex
+//      li.breadcrumb__item
+//        a(href="javascript:void(0);").breadcrumb__link Главная
+//      li.breadcrumb__item
+//        a(href="javascript:void(0);").breadcrumb__link Каталог товаров
+//      li.breadcrumb__item
+//        span.breadcrumb__span Для дома
+//    ul.breadcrumb__list.d-flex.d-lg-none
+//      li.breadcrumb__item
+//        svg(width='10' height='12' viewBox='0 0 10 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+//          path(d='M7 1.5L3 6L7 10.5' stroke='#A4AEB3' stroke-width='1.4')
+//        a(href="javascript:void(0);").breadcrumb__link.ml-2 На главную
+//
+//
+//
+//
+//mixin banner-middle__item(data)
+//  div(class=`banner-middle__item ${data.class}`)
+//    .banner-middle__top
+//      .banner-middle__title=data.title
+//      .banner-middle__decs=data.decs
+//    .button__wrap
+//      a(href="javascript:void(0);").link-more-white Подробнее
+//
+//mixin email__block
+//  .email__block
+//    .container
+//      .row.align-items-center
+//        .col-lg-6
+//          .email__block-title Получайте интересные предложения в нашей рассылке
+//        .col-lg-6
+//          .email-input__wrap
+//            input(type='text' placeholder='Введите email').email-input
+//            +button-blue('Подписаться')
+//
+//
+//mixin advant-item(data)
+//  .advant-item__wrap
+//    .advant-item
+//      .advant-img__wrap
+//        img(src=`../img/${data.img}` alt='', title='').advant-img
+//      .advant-title=data.title
+//
+//mixin tabs-decs__item(data)
+//  .tabs-decs__item
+//    .tabs-decs__title=data.title
+//    .tabs-decs__text=data.text
+//
+//mixin input__wrap(data)
+//  .input__wrap
+//    input(type=`${data.type}`, placeholder=`${data.placeholder}`).login-input
+//    label.label !{data.placeholder}
+//      if(data.star===true)
+//        span.star *
+//    .error-text Некорректные данные
+//
+//mixin checkbox-wrap(decs)
+//  label.checkbox-wrap
+//    input(type='checkbox').input-checkbox
+//    .checkbox__text=decs
+//
+//mixin login-tabs__block-bottom
+//  .login-tabs__block-bottom
+//    .login-check__wrap
+//      +checkbox-wrap('Согласен на обработку персональных данных')
+//      +checkbox-wrap('Подписаться на рассылку от компании')
+//    a(href="javascript:void(0);").button.button-blue Зарегистрироваться
+//
+//
+//mixin news-block(data)
+//  .news-block__wrap
+//    .news-block__img-wrap
+//      .news-item__img(style=`background-image:url('../img/${data.img}');`)
+//      //img(src=`../img/${data.img}` alt='', title='').news-item__img
+//    .news-block__decs
+//      .news-block__date=data.date
+//      a(href="javascript:void(0);").news-block__link
+//        .news-block__title=data.title
+//      .news-block__text=data.text 
+//
+//mixin video-block(data)
+//  .col-lg-4
+//    .video-block__wrap
+//      .video-link
+//        .video-block__img-wrap
+//          a(href="https://www.youtube.com/watch?v=C-gQEZZXy-U").video-youtube
+//            .news-item__img(style=`background-image:url('../img/${data.img}');`)
+//        .video-block__decs
+//          a(href="javascript:void(0);").video-block__title=data.title
+//
+//mixin paginator
+//  .paginator-wrap
+//    ul.paginator
+//      li
+//        a(href="javascript:void(0);").paginator-arrow-left
+//          svg(width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+//            circle(r='19.5' transform='matrix(-1 0 0 1 20 20)' stroke='#095DBA' stroke-opacity='0.2')
+//            path(d='M18.5 24L22.5 19.5L18.5 15' stroke='#7687A0' stroke-width='2')
+//
+//      li.paginator-item.item-active-js.active
+//        a(href="javascript:void(0);").paginator-link 1
+//      li.paginator-item.item-active-js
+//        a(href="javascript:void(0);").paginator-link 2
+//      li.paginator-item.item-active-js
+//        a(href="javascript:void(0);").paginator-link 3
+//      li.paginator-item.item-active-js
+//        | ...
+//      li.paginator-item.last.item-active-js
+//        a(href="javascript:void(0);").paginator-link 22
+//      li
+//        a(href="javascript:void(0);").paginator-arrow-right
+//          svg(width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+//            circle(r='19.5' transform='matrix(-1 0 0 1 20 20)' stroke='#095DBA' stroke-opacity='0.2')
+//            path(d='M18.5 24L22.5 19.5L18.5 15'  stroke-width='2')
+//
+//
+//mixin pagination
+//  .slider__wrap.slider__wrap-detail-nav
+//    .container-arrows
+//    .product-detail__slider-nav
+//      - for(var i=0; i<22; i++)
+//        .product-detail__slider-nav--item-wrap
+//          .paginator-item 1
+//
+//mixin decs-item-num(number, text)
+//  li.decs-item
+//    .decs-item__number=number
+//    .decs-item__text=text
+//
+//mixin decs-item-circle(text)
+//  li.decs-item
+//    .decs-item__circle
+//    .decs-item__text !{text}
+//
+//mixin card-img-item(img)
+//  .card-img__item
+//    img(src=`../img/${img}` alt='', title='').card-img
+//
+//mixin catalog-root-item(data)
+//  .col-lg-3
+//    .catalog-root__item
+//      .catalog-root__item_bg(style="background-image: url('../img/catalog-hover-img1.png')")
+//      .catalog-root__item-block
+//        .catalog-root__item-title=data.title
+//        ul.catalog-root__menu-list
+//          li.catalog-root__menu-item
+//            a(href="javascript:void(0);").catalog-root__menu-link=data.menu_item1
+//          li.catalog-root__menu-item
+//            a(href="javascript:void(0);").catalog-root__menu-link=data.menu_item2
+//          li.catalog-root__menu-item
+//            a(href="javascript:void(0);").catalog-root__menu-link=data.menu_item3
+//          li.catalog-root__menu-item
+//            a(href="javascript:void(0);").catalog-root__menu-link=data.menu_item4
+//          li.catalog-root__menu-item
+//            a(href="javascript:void(0);").catalog-root__menu-link=data.menu_item5
+//        .catalog-root__menu-more
+//          a(href="javascript:void(0);").catalog-root__menu-more-link=data.menu_more
+//      .catalog-root__item-icon-wrap
+//        +icon(`${data.img}`, 'icon-catalog-root')
+//
+//mixin banner-opt
+//  a(href="javascript:void(0);").banner-opt__wrap.d-none.d-lg-flex
+//    .banner-opt__title Выгодные условия<br/> для оптовиков
+//    .button__wrap
+//      .link-more-white Подробнее
+//
+//mixin order-item(data)
+//  .order-item
+//    //label.checkbox-wrap
+//      input(type='checkbox').checkbox
+//    .order-item__img-wrap
+//      img(src='../img/product-img.png' alt='', title='').order-item-img
+//    .order-block
+//      .order-item__name=data.name
+//      .order-item__count__wrap
+//        .order-item__cost-wrap.d-none.d-lg-flex
+//          .order-item__cost-top.price=data.top_cost
+//          .old-price.price=data.bottom_cost
+//        +count
+//        .order-item__cost-wrap
+//          .order-item__cost-top.price=data.top_cost
+//          .old-price.price=data.bottom_cost                  
+//      a(href="javascript:void(0);").button-link Удалить
+//
+//mixin order-item-step(data)
+//  .order-item
+//    .order-item__img-wrap
+//      img(src='../img/product-img.png' alt='', title='').order-item-img
+//    .order-item__block-inner
+//      .order-item__name.pr-lg-5=data.name
+//      .order-item__quantity.price=data.quantity
+//      .order-item__cost-wrap
+//        .order-item__cost-top.price=data.top_cost
+//        .old-price.price=data.bottom_cost
+//
+//
+//
+//mixin advant-block
+//  .slider__wrap.slider__wrap-advant
+//    .container-arrows
+//    .advant-block
+//      +advant-item({
+//        img: 'advant-img-1.png',
+//        title: 'Профессиональная консультация'
+//      })
+//      +advant-item({
+//        img: 'advant-img-2.png',
+//        title: 'Удобные условия поставки'
+//      })
+//      +advant-item({
+//        img: 'advant-img-3.png',
+//        title: 'Оперативноу производство'
+//      })
+//      +advant-item({
+//        img: 'advant-img-4.png',
+//        title: 'Бесплатая доставка от 5000 ₽'
+//      })
+//
+//mixin step-head-collaps(num,name)
+//  .step__head-collaps
+//    .order-step__head
+//      .order-step__head-left
+//        .step__head-num=num
+//        .step__head-name=name
+//
+//
+//mixin final-cost__block
+//  .final-cost__block
+//    .final-cost__item
+//      .final-cost__left Товаров на:
+//      .final-cost__right
+//        .order-item__cost-wrap
+//          .order-item__cost-top.price 26 496 ₽
+//          .old-price.price 36 496 ₽
+//    .final-cost__item
+//      .final-cost__left Общий вес:
+//      .final-cost__right
+//        .order-item__cost-top.price 1000000 л
+//    .bottom-line.mb-3
+//    .final-cost__item
+//      .final-cost__left Доставка:
+//      .final-cost__right
+//        .order-item__cost-top.price бесплатно
+//    .final-cost__item.gray__block
+//      .final-cost__left Экономия:
+//      .final-cost__right
+//        .order-item__cost-top.price 10 000 ₽
+//    .final-cost__item.pt-lg-3.pb-lg-2
+//      .final-cost__left Итого:
+//      .final-cost__right
+//        .order-item__cost-top.price.final-cost-big 40 244  ₽  
+//
+//
+//mixin orders-list-step-next
+//  .orders-list__wrap.order-steps
+//    .order-step__head
+//      .order-step__head-left
+//        .step__head-num
+//          img(src='../img/icon-check-blue.svg' alt='', title='').icon-check-blue
+//        .step__head-name Товары в заказе
+//      .order-step__head-right
+//        a(href="javascript:void(0);").button-link Изменить
+//    +order-item-step({
+//      name: 'Средство для очистки колесных дисков слово «Disk», 5 л',
+//      quantity: '1 шт',
+//      top_cost: '3200 ₽',
+//      bottom_cost: '26 496 ₽'
+//    })
+//    +order-item-step({
+//      name: 'Средство для очистки колесных дисков слово «Disk», 5 л',
+//      quantity: '1 шт',
+//      top_cost: '1260 ₽'
+//    })
+//
+//
+//mixin order-step__middle-type(data)
+//  label.checkbox-wrap.checkbox-wrap_order
+//    .middle-type__block
+//      img(src=`../img/${data.img}` alt='', title='').middle-type__block-img
+//      .input-checkbox__wrap
+//        input(type='radio' name=`${data.nameRadio}`).input-checkbox
+//      .middle-type__cost=data.cost
+//    .middle-type__name !{data.name}
+//
+//mixin pay-step__middle-type(data)
+//  label.checkbox-wrap.checkbox-wrap_order
+//    .middle-type__block
+//      img(src=`../img/${data.img}` alt='', title='').middle-type__block-img
+//      .input-checkbox__wrap
+//        input(type='radio' name=`${data.nameRadio}`).input-checkbox
+//    .middle-type__name !{data.name}
+//
+//
+//mixin delivery-step-next
+//  .orders-list__wrap
+//    .order-step__head
+//      .order-step__head-left
+//        .step__head-num
+//          img(src='../img/icon-check-blue.svg' alt='', title='').icon-check-blue
+//        .step__head-name Доставка
+//      .order-step__head-right
+//        a(href="javascript:void(0);").button-link Изменить
+//    .step-next__block
+//      .step-next__block-left
+//        .step-next__img-wrap
+//          img(src='../img/delivery-type-icon2.svg' alt='', title='').step-next-img
+//        .step-next__block--inner
+//          .step-next__name Доставка с использованием автоматизированной службы доставки Boxberry
+//          .order-item__cost-top.price.d-block.d-lg-none 200 ₽
+//      .step-next__block-right
+//        .order-item__cost-top.price.d-none.d-lg-block 200 ₽
+//
+//
+//mixin pay-step-next
+//  .orders-list__wrap
+//    .order-step__head
+//      .order-step__head-left
+//        .step__head-num
+//          img(src='../img/icon-check-blue.svg' alt='', title='').icon-check-blue
+//        .step__head-name Оплата
+//      .order-step__head-right
+//        a(href="javascript:void(0);").button-link Изменить
+//    .step-next__block
+//      .step-next__block-left
+//        .step-next__img-wrap
+//          img(src='../img/pay-type-icon2.svg' alt='', title='').step-next-img
+//        .step-next__name Банковский перевод
+//
+//mixin docs-block
+//  .tabs-docs__item
+//    .tabs-docs__data 25.12.2020
+//    .tabs-docs__decs
+//      a(href="javascript:void(0);").tabs-docs__name.tabs-docs__name-link
+//         |РУ на систему дозирования жидкостей автоматическая прецизионная QIAgility с принадлежностями
+//      .tabs-docs__bill ФСЗ 2008/03399 от 21 июня 2016 года
+//    .tabs-docs__right
+//      .tabs-docs__format.price PDF 256 кб
+//      .tabs-docs__icons
+//        a(href="javascript:void(0);" download).tabs-docs-icon-item
+//          img(src='../img/icon-save.svg' alt='', title='').save-img
+//        a(href="javascript:void(0);").tabs-docs__icon-item
+//          img(src='../img/icon-print.svg' alt='', title='').print-img
+//
+//mixin lk-block-right(legal)
+//  .lk__block-right
+//    //.lk__block-item
+//    //  a(href="javascript:void(0);").lk__block-link Главная
+//    if(legal)
+//      .lk__block-item.accord-wrap--js
+//        .lk-right__title.accord-title--js Профиль
+//        .lk-right__block.accord-block--js
+//          .lk__block-item
+//            a(href="javascript:void(0);").lk__block-link Мой профиль
+//          .lk__block-item.accord-wrap--js
+//            .lk-right__title.accord-title--js Организации
+//            .lk-right__block.accord-block--js
+//              a(href="javascript:void(0);").lk__block-link Организация 1
+//          .lk__block-item.accord-wrap--js
+//            .lk-right__title.accord-title--js Пользователи
+//            .lk-right__block.accord-block--js
+//              a(href="javascript:void(0);").lk__block-link Пользователь 1
+//
+//    else
+//      .lk__block-item.active
+//        a(href="javascript:void(0);").lk__block-link Профиль    
+//    .lk__block-item
+//      a(href="javascript:void(0);").lk__block-link Документация
+//    if(legal)
+//      .lk__block-item
+//        a(href="javascript:void(0);").lk__block-link Статусы заказов по юридическим лицам
+//    .lk__block-item
+//      a(href="javascript:void(0);").lk__block-link История заказов
+//    .lk__block-item
+//      a(href="javascript:void(0);").lk__block-link Рекламация
+//    .lk__block-item.lk__block-bottom
+//      a(href="javascript:void(0);").lk__block-link Выйти
+//
+//
+//
+//
+//mixin lk-info-item(argument,count,value,but)
+//  .lk__info-item
+//    .row
+//      .col-lg-5
+//        .lk__info-argument=argument
+//      .col-lg-7
+//        -for(var i=0; i<`${count}`; i++)
+//          input(type='text' value=value disabled).input-text
+//        if(but===true)
+//          .d-none.d-lg-block
+//            a(href="javascript:void(0);").button.button-blue_dark-small.mb-3 Добавить ещё
+//  if(but === true)
+//    .d-block.d-lg-none
+//      a(href="javascript:void(0);").button.button-blue_dark-small.mb-3 Добавить ещё
+//
+//
+//
+//mixin history-orders-item
+//  .history-orders__wrap
+//    .history-orders__item
+//      .history-orders__item-top
+//        .history-orders__item-left
+//          a(href="javascript:void(0);").history-orders__title Заказ 18 от 14.08.2020
+//          .text-small-gray 1 товар на сумму 180 руб.
+//        .history-orders__item-right
+//          <!-- Статус Отменен - status-red -->
+//          .history-orders__status.status-green Принят
+//      .history-orders__item-bottom
+//        <!-- Статус Отменен - status-pay-red -->
+//        .history-orders__item-detail.status-pay-green <span class='span-gray'>Статус оплаты:</span> оплачен
+//        .history-orders__item-detail <span class='span-gray'>Оплата:</span> банковский перевод
+//        .history-orders__item-detail <span class='span-gray'>Доставка:</span> самовывоз
+//        .button-wrap
+//          a(href="javascript:void(0);").button.button-blue Оплатить
+//
+//mixin order-detail-item(argument,value)
+//  .text-small-gray=argument
+//  .lk__info-value=value
+//
+//
+//
+//mixin load-block
+//  .load-file
+//    #dropzone.dropzone(action='/file-upload')
+//      .fallback
+//        input(name='file' type='file' multiple='').drop-file
+//      .dz-message(data-dz-message='') Загрузить документ
+//
+//mixin orders-list
+//  -for(var i=0; i<5; i++) 
+//    +history-orders-item
+//  +paginator
+//
+//
+//mixin social__list
+//  ul.social__list
+//    li.social__item
+//      a(href="javascript:void(0);").social-link
+//        .social-img.social-img_inst
+//    li.social__item
+//      a(href="javascript:void(0);").social-link
+//        .social-img.social-img_fb
+//    li.social__item
+//      a(href="javascript:void(0);").social-link
+//        .social-img.social-img_you
+//    li.social__item
+//      a(href="javascript:void(0);").social-link
+//        .social-img.social-img_tel
+//    li.social__item
+//      a(href="javascript:void(0);").social-link
+//        .social-img.social-img_tw
+//
+//
+//
+//
+//mixin share-block
+//  .button-share__wrap
+//    a(href="javascript:void(0);").button-share Поделиться
+//    .share-block
+//      script(src='https://yastatic.net/share2/share.js')
+//      .ya-share2(data-curtain='' data-shape='round' data-color-scheme='blackwhite' data-services='facebook,telegram,twitter')
+//
+//
+//
+//
+//mixin drop__menu-wrap(mod)
+//  div(class='drop__menu-wrap ' + mod)
+//    .drop__menu
+//      ul.drop__menu-list
+//        li.drop__menu-item.menu-item-js(data-menu-item='home')
+//          a(href="javascript:void(0);").drop__menu-link
+//            +icon('home1', 'drop__menu-item-img')
+//            .drop__menu-item-text Для дома
+//        li.drop__menu-item.menu-item-js(data-menu-item='auto')
+//          a(href="javascript:void(0);").drop__menu-link
+//            +icon('detergent-1', 'drop__menu-item-img')
+//            .drop__menu-item-text Автохимия и детейлинг
+//        li.drop__menu-item.menu-item-js(data-menu-item='dry-cleaning')
+//          a(href="javascript:void(0);").drop__menu-link
+//            +icon('cloth-1', 'drop__menu-item-img')
+//            .drop__menu-item-text Химчистка и прачеченая
+//        li.drop__menu-item.menu-item-js(data-menu-item='manufacture')
+//          a(href="javascript:void(0);").drop__menu-link
+//            +icon('clean-dishes-1', 'drop__menu-item-img')
+//            .drop__menu-item-text Пищевые производства
+//        li.drop__menu-item.menu-item-js(data-menu-item='disinfection')
+//          a(href="javascript:void(0);").drop__menu-link
+//            +icon('hand-sanitizer1', 'drop__menu-item-img')
+//            .drop__menu-item-text Дезинфекция
+//        li.drop__menu-item.menu-item-js(data-menu-item='cleaning')
+//          a(href="javascript:void(0);").drop__menu-link
+//            +icon('wipes', 'drop__menu-item-img')
+//            .drop__menu-item-text Клининг (HoReCa)
+//        li.drop__menu-item.menu-item-js(data-menu-item='service')
+//          a(href="javascript:void(0);").drop__menu-link
+//            +icon('repair', 'drop__menu-item-img')
+//            .drop__menu-item-text Для ремонта
+//      +drop__menu--inner('home')
+//      +drop__menu--inner('auto')
+//      +drop__menu--inner('dry-cleaning')
+//      +drop__menu--inner('manufacture')
+//      +drop__menu--inner('disinfection')
+//      +drop__menu--inner('cleaning')
+//      +drop__menu--inner('service')   
+//
+//mixin count
+//  .count__wrap
+//    .count
+//      a(href="javascript:void(0);").count-minus
+//        svg(width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg')
+//          path(d='M4.79102 11.5H18.2077' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+//      input.input-count(type='text', value='1 шт')
+//      a(href="javascript:void(0);").count-plus
+//        svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+//          path(d='M9.67188 3.75V15.4167' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+//          path(d='M3.83789 9.58398H15.5046' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+//
+//mixin captcha
+//  .contact-inputs__wrap
+//    .contact-inputs__left
+//      .input__wrap
+//        .captcha__wrap 88 / 8 =
+//    .contact-inputs__right
+//      +input__wrap({
+//        type: 'text',
+//        placeholder: 'Введите ответ'
+//      })
+//
+//mixin property-icon__block
+//  .property-icon__block
+//    img(src='../img/property-icon-1.png' alt='', title='').property-icon
+//    img(src='../img/property-icon-2.png' alt='', title='').property-icon
+//    img(src='../img/property-icon-3.png' alt='', title='').property-icon
+//    img(src='../img/property-icon-4.png' alt='', title='').property-icon
+//

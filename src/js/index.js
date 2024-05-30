@@ -56,6 +56,7 @@ jQuery(document).ready(function () {
   const swiperProducts = new Swiper(".products-slider", {
     slidesPerView: 1.1,
     spaceBetween: 20,
+    autoHeight: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",

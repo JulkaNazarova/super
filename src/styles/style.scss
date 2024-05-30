@@ -578,6 +578,10 @@ ul li {
   }
 }
 
+.products-slider .swiper-slide{
+  height: 100%;
+}
+
 .products-slider__item {
   padding: 26px;
   display: flex;
@@ -585,6 +589,7 @@ ul li {
   justify-content: space-between;
   border: 1px solid $color-black;
   gap: 50px;
+  height: 100%;
 }
 
 .products-slider__img {

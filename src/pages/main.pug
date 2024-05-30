@@ -105,6 +105,17 @@ block content
             .products-slider__wrap
               .swiper.products-slider
                 .swiper-wrapper
+                  .swiper-slide
+                    .products-slider__item
+                      .products-slider__top
+                        .products-slider__img(style="background-image:url('./img/prod1.png');")
+                        .products-slider__title Мотоцикл CJ Adept 700 Solo Мотоцикл CJ Adept 700 Solo
+                      .products-slider__bottom
+                        .products-slider__price
+                          .products-slider__price-new от 745 000 
+                          .products-slider__price-old от 830 000 
+                        .products-slider__btn
+                          a(href="javascript:void(0);").btn.btn-red Купить
                   -for(var i=0; i<6; i++)
                     .swiper-slide
                       .products-slider__item

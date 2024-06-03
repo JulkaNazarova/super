@@ -124,6 +124,10 @@ jQuery(document).ready(function () {
     e.stopPropagation();
   });
 
+  $('.mob-nav__down').on('click', function () {
+    $(this).find('.mob-nav__submenu').slideToggle();
+  });
+
    
 });
 
